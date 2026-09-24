@@ -6,16 +6,17 @@
 
 ## 档位 · Tiers
 
-| 文件 | 风格 | 参数 |
-|---|---|---|
-| [`clash-verge-summer-sky-ultra.css`](clash-verge-summer-sky-ultra.css) | **纯透明无磨砂**（壁纸最清晰）：卡片只是一层薄雾白纱 + 细描边，透过去直接看到清晰壁纸，无任何模糊 | 白纱 8% · 侧栏 20% |
-| [`clash-verge-summer-sky-high.css`](clash-verge-summer-sky-high.css) | 高透明磨砂：卡片内轻微虚化，轮廓通透 | 白底 12% · blur 14px |
-| [`clash-verge-summer-sky-normal.css`](clash-verge-summer-sky-normal.css) | 正常磨砂（推荐）：通透与可读平衡 | 白底 20% · blur 18px |
+| 文件 | 风格 |
+|---|---|
+| [`clash-verge-summer-sky-ultra.css`](clash-verge-summer-sky-ultra.css) | **纯透明无磨砂**：卡片只是一层薄雾白纱 + 细描边，透过去直接看到清晰壁纸，全屏无一处模糊 |
+| [`clash-verge-summer-sky-high.css`](clash-verge-summer-sky-high.css) | 高透明磨砂：卡片内轻微虚化，轮廓通透 |
+| [`clash-verge-summer-sky-normal.css`](clash-verge-summer-sky-normal.css) | 正常磨砂（推荐）：通透与可读平衡 |
 
-- **ultra** 适合"壁纸就是主角"：全屏无一处模糊，文字靠深藏青 + 白微光保证可读
-- **high / normal** 是磨砂玻璃档：卡片区域虚化、玻璃外壁纸依然清晰
+## 预览 · Previews
 
-设计原型全页预览（7 页）见 [`previews/pages/`](previews/pages/)。
+| Ultra（纯透明） | High（高透明磨砂） | Normal（正常磨砂） |
+|:---:|:---:|:---:|
+| ![ultra](previews/ultra.png) | ![high](previews/high.png) | ![normal](previews/normal.png) |
 
 ## 安装 · Install
 
@@ -34,10 +35,10 @@
 
 ## 特性 · Features
 
-- **壁纸清晰优先**：壁纸只挂在根容器（`html/body/#root`），固定 `cover` 锐利显示，不随滚动
-- **真实类名稳定覆盖**：选择器依据 Clash Verge Rev 官方源码（`layout.scss` / `page.scss` / `settings.tsx` / `profile-box.tsx`）的真实稳定类名（`.layout-content__left` / `.base-page` / `.MuiPaper-root` / `.MuiBox-root[aria-selected]` 等）+ `!important`，不依赖随构建变化的 `css-xxxxxx` 哈希类，客户端小版本升级不易失效
-- **覆盖面全**：侧栏、导航选中天空蓝渐变药丸、订阅卡片 / 设置面板 / Merge & Script 卡、输入框浅底深字、深藏青正文保证可读
-- **零依赖**：单文件 CSS，壁纸内嵌，离线可用
+- **三档任选**：纯透明 / 高透明 / 正常磨砂，一段 CSS 粘贴即用，随时切换
+- **壁纸清晰**：夏日晴空壁纸全程锐利显示（ultra 档全屏无一处模糊）
+- **换壁纸方便**：替换一段 base64 就能换成任意喜欢的壁纸
+- **离线可用**：单文件 CSS，壁纸内嵌，复制粘贴就能用
 
 ## 兼容性 · Compatibility
 
