@@ -2,6 +2,8 @@
 
 欢迎提交新主题。本仓库每个主题一个独立文件夹，结构如下：
 
+> 写主题前先读 [`docs/css-classnames.md`](docs/css-classnames.md)——官方源码核对的稳定类名清单与覆盖策略。
+
 ```
 themes/
 └── <theme-name>/          # 主题名（英文小写连字符）
