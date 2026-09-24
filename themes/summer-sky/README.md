@@ -1,15 +1,19 @@
 # 夏日晴空 · SummerGlass
 
-> 夏日晴空 × 磨砂玻璃拟态主题：壁纸清晰锐利、卡片磨砂通透、天空蓝点缀。两档透明度任选，整段粘贴即用。
+> 夏日晴空 × 玻璃拟态主题：壁纸清晰锐利、天空蓝点缀。三档透明度任选，整段粘贴即用。
 
 ![preview](previews/normal.png)
 
-## 预览 · Previews
+## 档位 · Tiers
 
-| 高透明 High | 正常 Normal（推荐） |
-|:---:|:---:|
-| 壁纸最透，卡片近乎隐形 | 通透与可读平衡 |
-| ![high](previews/high.png) | ![normal](previews/normal.png) |
+| 文件 | 风格 | 参数 |
+|---|---|---|
+| [`clash-verge-summer-sky-ultra.css`](clash-verge-summer-sky-ultra.css) | **纯透明无磨砂**（壁纸最清晰）：卡片只是一层薄雾白纱 + 细描边，透过去直接看到清晰壁纸，无任何模糊 | 白纱 8% · 侧栏 20% |
+| [`clash-verge-summer-sky-high.css`](clash-verge-summer-sky-high.css) | 高透明磨砂：卡片内轻微虚化，轮廓通透 | 白底 12% · blur 14px |
+| [`clash-verge-summer-sky-normal.css`](clash-verge-summer-sky-normal.css) | 正常磨砂（推荐）：通透与可读平衡 | 白底 20% · blur 18px |
+
+- **ultra** 适合"壁纸就是主角"：全屏无一处模糊，文字靠深藏青 + 白微光保证可读
+- **high / normal** 是磨砂玻璃档：卡片区域虚化、玻璃外壁纸依然清晰
 
 设计原型全页预览（7 页）见 [`previews/pages/`](previews/pages/)。
 
@@ -18,12 +22,7 @@
 1. 打开 Clash Verge Rev → **设置** → **外观**
 2. 找到 **自定义 CSS** 输入框
 3. 打开本目录下任意一档 CSS，**全选复制，整段粘贴**
-4. 界面立即生效
-
-| 文件 | 效果 |
-|---|---|
-| [`clash-verge-summer-sky-high.css`](clash-verge-summer-sky-high.css) | 高透明：卡片白底 12% · blur 14px，壁纸最清晰 |
-| [`clash-verge-summer-sky-normal.css`](clash-verge-summer-sky-normal.css) | 正常（推荐）：白底 20% · blur 18px |
+4. 界面立即生效；换档位直接替换粘贴内容
 
 ## 换壁纸 · Change Wallpaper
 
@@ -35,9 +34,9 @@
 
 ## 特性 · Features
 
-- **壁纸清晰优先**：壁纸只挂在根容器（`html/body/#root`），固定 `cover` 锐利显示，不随滚动；卡片靠 `backdrop-filter` 磨砂透出背景
+- **壁纸清晰优先**：壁纸只挂在根容器（`html/body/#root`），固定 `cover` 锐利显示，不随滚动
 - **真实类名稳定覆盖**：选择器依据 Clash Verge Rev 官方源码（`layout.scss` / `page.scss` / `settings.tsx` / `profile-box.tsx`）的真实稳定类名（`.layout-content__left` / `.base-page` / `.MuiPaper-root` / `.MuiBox-root[aria-selected]` 等）+ `!important`，不依赖随构建变化的 `css-xxxxxx` 哈希类，客户端小版本升级不易失效
-- **覆盖面全**：侧栏磨砂、导航选中天空蓝渐变药丸、订阅卡片 / 设置面板 / Merge & Script 卡玻璃、输入框浅底深字、深藏青正文保证可读
+- **覆盖面全**：侧栏、导航选中天空蓝渐变药丸、订阅卡片 / 设置面板 / Merge & Script 卡、输入框浅底深字、深藏青正文保证可读
 - **零依赖**：单文件 CSS，壁纸内嵌，离线可用
 
 ## 兼容性 · Compatibility

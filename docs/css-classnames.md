@@ -69,17 +69,31 @@
 
 其余：`--background-color-alpha`、`--selection-color`、`--scroller-color` 按需覆盖。
 
-## 三、档位参数约定
+## 三、磨砂实现与档位差异（重要）
 
-主题 CSS 由生成器参数化产出，各档位只差玻璃浓度：
+**背景教训**：磨砂最初用 `backdrop-filter` 实现，但在真实客户端中会触发 Chromium 合成缺陷——**嵌套结构 + 多个 backdrop-filter 元素**（如侧栏内嵌菜单 `ul`、`.MuiMenu-paper` 内嵌 `.MuiList-root`）会把整块背景纹理损坏成与元素边界无关的大面积糊斑。经逐规则隔离实验确认后，档位改用两种安全实现：
 
-| Token | 含义 | summer-sky high | summer-sky normal |
-|---|---|---|---|
-| `CARD` | 卡片白底 alpha | `.12` | `.20` |
-| `CARD_BLUR` | 卡片 backdrop blur(px) | `14` | `18` |
-| `NAV` | 侧栏白底 alpha | `.30` | `.42` |
+| 档位 | 实现 | 说明 |
+|---|---|---|
+| **ultra（纯透明）** | 无任何模糊：磨砂面 = `rgba(255,255,255,.08)` 白雾薄纱 + 描边，透过卡片直接看到清晰壁纸 | 最稳：零滤镜、零合成风险；文件最小（~157KB） |
+| **high / normal（磨砂）** | 预烘焙模糊壁纸：Chrome canvas 预先 blur(24px) 生成模糊图，磨砂面 = `linear-gradient(白雾α,白雾α), url("data:…模糊图") fixed center/cover` 双背景 | `fixed` 使糊图与视口像素对齐（虚化区与清晰区连续）；等效 backdrop-filter 视觉，无合成 bug |
 
-## 四、排查与扩展流程
+磨砂实现规则（新增档位时遵守）：
+
+1. **不要给 `.MuiList-root` 或任何嵌套在磨砂容器内的元素加 `backdrop-filter`**
+2. 需要磨砂时优先用「烘焙模糊图 + `fixed` 对齐」双背景方案，而非 backdrop-filter
+3. 白雾 α 在明亮壁纸上低于 .10 基本不可见，档位间 α 差至少 .15 才有可感知区分
+4. 内嵌图 URL 用 CSS 变量去重时注意：部分客户端注入环境对超长 `var()` 支持不稳，稳妥做法是直接内嵌（文件会大 ~250KB）
+
+## 四、档位参数表（当前）
+
+| 档位 | CARD（卡片白雾） | NAV（侧栏白雾） | BGALPHA（背景薄雾） | 磨砂 |
+|---|---|---|---|---|
+| ultra | .08 | .20 | .08 | 无（纯透明） |
+| high | .12 | .30 | — | blur 14px |
+| normal | .20 | .42 | — | blur 18px |
+
+## 五、排查与扩展流程
 
 1. 客户端里某块样式不对 → F12 选中该元素，看 computed 的 `background-color`/`backdrop-filter` 和命中的规则
 2. 找它的稳定类名（`MuiXxx-root` 或语义类），对照上表确认来源
@@ -87,7 +101,7 @@
 4. 本地验证：构建同结构 DOM mock，Chrome headless `--dump-dom` 读 computed style 断言（注意 Chrome 会归一化 `0.30→0.3`、`saturate(150%)→saturate(1.5)`）
 5. **mock 必须复刻真实嵌套层级**——选择器命中路径与线上不同会「假 PASS」
 
-## 五、参考
+## 六、参考
 
 - 官方仓库：https://github.com/clash-verge-rev/clash-verge-rev （默认分支 `dev`）
 - 关键源码路径：`src/assets/styles/{layout,page,index}.scss`、`src/components/layout/layout-sidebar.tsx`、`src/pages/settings.tsx`、`src/components/profile/{profile-item,profile-box,profile-more}.tsx`
