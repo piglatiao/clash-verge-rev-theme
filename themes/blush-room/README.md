@@ -2,7 +2,7 @@
 
 > 粉绒沙发 × 碎花上衣，奶油粉居家场景，主色取沙发的豆沙粉。三档透明度任选，整段粘贴即用。
 
-![preview](previews/normal.png)
+![preview](previews/normal.jpg)
 
 ## 档位 · Tiers
 
@@ -18,7 +18,7 @@
 
 | Ultra（纯透明） | High（高透明磨砂） | Normal（正常磨砂） |
 |:---:|:---:|:---:|
-| ![ultra](previews/ultra.png) | ![high](previews/high.png) | ![normal](previews/normal.png) |
+| ![ultra](previews/ultra.jpg) | ![high](previews/high.jpg) | ![normal](previews/normal.jpg) |
 
 ## 配色 · Palette
 

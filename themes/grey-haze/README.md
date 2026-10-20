@@ -2,7 +2,7 @@
 
 > 冷紫灰墙面 × 黑发与烟雾，仰头冷感插画，主色取雾气的灰紫。三档透明度任选，整段粘贴即用。
 
-![preview](previews/normal.png)
+![preview](previews/normal.jpg)
 
 ## 档位 · Tiers
 
@@ -18,7 +18,7 @@
 
 | Ultra（纯透明） | High（高透明磨砂） | Normal（正常磨砂） |
 |:---:|:---:|:---:|
-| ![ultra](previews/ultra.png) | ![high](previews/high.png) | ![normal](previews/normal.png) |
+| ![ultra](previews/ultra.jpg) | ![high](previews/high.jpg) | ![normal](previews/normal.jpg) |
 
 ## 配色 · Palette
 

@@ -6,7 +6,7 @@
 
 ## 🌤 夏日晴空 SummerGlass
 
-蓝天白云 × 磨砂玻璃：壁纸清晰锐利，卡片磨砂通透，天空蓝点缀。三档透明度任选，壁纸内嵌、离线可用。
+蓝天白云 × 磨砂玻璃：壁纸清晰锐利，卡片磨砂通透，天空蓝点缀。两档透明度，壁纸内嵌、离线可用。
 
 ![夏日晴空](themes/summer-sky/previews/normal.png)
 
@@ -24,7 +24,7 @@
 
 白墙走廊 × 藏青制服，超广角日系构图：墙面大面积留白，主色取制服深蓝。
 
-![白墙学园](themes/white-campus/previews/normal.png)
+![白墙学园](themes/white-campus/previews/normal.jpg)
 
 **[查看主题与下载 →](themes/white-campus/)**
 
@@ -32,7 +32,7 @@
 
 窗边灰帘 × 白衬衫格裙，室内冷灰调，主色取窗帘的蓝灰。
 
-![灰帘静室](themes/quiet-grey/previews/normal.png)
+![灰帘静室](themes/quiet-grey/previews/normal.jpg)
 
 **[查看主题与下载 →](themes/quiet-grey/)**
 
@@ -40,7 +40,7 @@
 
 樱粉垂枝 × 秋金黄叶，仰拍晴空插画，主色取花瓣的玫瑰粉。
 
-![樱金晴空](themes/sakura-gold/previews/normal.png)
+![樱金晴空](themes/sakura-gold/previews/normal.jpg)
 
 **[查看主题与下载 →](themes/sakura-gold/)**
 
@@ -48,7 +48,7 @@
 
 灰水泥墙 × 侧逆光人像 × 紫花束，主色取花束的暗紫。
 
-![素墙花影](themes/wall-bloom/previews/normal.png)
+![素墙花影](themes/wall-bloom/previews/normal.jpg)
 
 **[查看主题与下载 →](themes/wall-bloom/)**
 
@@ -56,7 +56,7 @@
 
 冷紫灰墙面 × 黑发与烟雾，仰头冷感插画，主色取雾气的灰紫。
 
-![冷灰烟岚](themes/grey-haze/previews/normal.png)
+![冷灰烟岚](themes/grey-haze/previews/normal.jpg)
 
 **[查看主题与下载 →](themes/grey-haze/)**
 
@@ -64,7 +64,7 @@
 
 米色条纹沙发 × 暖棕针织，室内暖光，主色取针织衫的深可可。
 
-![暖棕沙发](themes/cocoa-couch/previews/normal.png)
+![暖棕沙发](themes/cocoa-couch/previews/normal.jpg)
 
 **[查看主题与下载 →](themes/cocoa-couch/)**
 
@@ -72,7 +72,7 @@
 
 夏日祭灯笼串 × 蓝紫黄昏，浴衣少女插画，主色取灯笼的暖橘。
 
-![灯宵夏祭](themes/lantern-fest/previews/normal.png)
+![灯宵夏祭](themes/lantern-fest/previews/normal.jpg)
 
 **[查看主题与下载 →](themes/lantern-fest/)**
 
@@ -80,7 +80,7 @@
 
 白床单 × 红缎吊带裙 × 纱帘逆光，主色取裙身的正红。
 
-![纱帘红裙](themes/scarlet-veil/previews/normal.png)
+![纱帘红裙](themes/scarlet-veil/previews/normal.jpg)
 
 **[查看主题与下载 →](themes/scarlet-veil/)**
 
@@ -88,7 +88,7 @@
 
 衣帽间对镜自拍 × 原木地板，粉软垫点缀，主色取木地板的浅橡。
 
-![镜前衣帽](themes/mirror-closet/previews/normal.png)
+![镜前衣帽](themes/mirror-closet/previews/normal.jpg)
 
 **[查看主题与下载 →](themes/mirror-closet/)**
 
@@ -96,7 +96,7 @@
 
 白床单俯拍 × 柔光人像，全画面奶白与浅灰，主色取床品的奶咖。
 
-![素床柔光](themes/pale-linen/previews/normal.png)
+![素床柔光](themes/pale-linen/previews/normal.jpg)
 
 **[查看主题与下载 →](themes/pale-linen/)**
 
@@ -104,7 +104,7 @@
 
 粉绒沙发 × 碎花上衣，奶油粉居家场景，主色取沙发的豆沙粉。
 
-![粉绒居家](themes/blush-room/previews/normal.png)
+![粉绒居家](themes/blush-room/previews/normal.jpg)
 
 **[查看主题与下载 →](themes/blush-room/)**
 
