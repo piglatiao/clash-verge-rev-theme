@@ -90,10 +90,10 @@
 | 档位 | CARD（卡片白雾） | NAV（侧栏白雾） | BGALPHA（背景薄雾） | 磨砂 |
 |---|---|---|---|---|
 | ultra | .08 | .20 | .08 | 无（纯透明） |
-| high | .08 | .22 | — | blur 10px |
-| normal | .20 | .30 | — | blur 18px |
+| high | .08 | .22 | .18 | blur 10px |
+| normal | .20 | .30 | .18 | blur 18px |
 
-> 以上档位参数为**全主题统一基线**（summer-sky 与 ocean-toon 共用）：high 档卡片白雾降到与 ultra 一致的 .08、侧栏 .22，normal 侧栏由 .42 收到 .30，确保两主题观感一致、档位间区分清晰。
+> 以上档位参数为**全主题统一基线**（全部 13 套主题共用）：high 档卡片白雾降到与 ultra 一致的 .08、侧栏 .22，normal 侧栏由 .42 收到 .30，确保各主题观感一致、档位间区分清晰。BGALPHA 的 `.18` 与现有 high 档实现对齐（旧表此处标「—」易被误读成不设置）。
 
 ## 五、排查与扩展流程
 
@@ -107,3 +107,25 @@
 
 - 官方仓库：https://github.com/clash-verge-rev/clash-verge-rev （默认分支 `dev`）
 - 关键源码路径：`src/assets/styles/{layout,page,index}.scss`、`src/components/layout/layout-sidebar.tsx`、`src/pages/settings.tsx`、`src/components/profile/{profile-item,profile-box,profile-more}.tsx`
+
+## 七、主题登记表（当前 13 套）
+
+所有主题共用上文第四节档位基线（ultra / high / normal 三档，参数完全一致），差异只在壁纸与配色。
+
+| 目录 | 名称 | 主色 | 亮部（渐变端点） |
+|---|---|---|---|
+| [summer-sky](../themes/summer-sky/) | 夏日晴空 · SummerGlass | `#1E6FD9` | `#3B9AF0` |
+| [ocean-toon](../themes/ocean-toon/) | 卡通大海 · OceanToon | `#D9541E` | `#E8823C` |
+| [白墙学园](../themes/white-campus/) | 白墙学园 · WhiteCampus | `#2A4A7A` | `#4A7CB8` |
+| [灰帘静室](../themes/quiet-grey/) | 灰帘静室 · QuietGrey | `#5F6E86` | `#8796AE` |
+| [樱金晴空](../themes/sakura-gold/) | 樱金晴空 · SakuraGold | `#D2557A` | `#EE8FA8` |
+| [素墙花影](../themes/wall-bloom/) | 素墙花影 · WallBloom | `#6A4A6E` | `#9A6E9E` |
+| [冷灰烟岚](../themes/grey-haze/) | 冷灰烟岚 · GreyHaze | `#5B5A7E` | `#8886AC` |
+| [暖棕沙发](../themes/cocoa-couch/) | 暖棕沙发 · CocoaCouch | `#6B4A34` | `#9C7350` |
+| [灯宵夏祭](../themes/lantern-fest/) | 灯宵夏祭 · LanternFest | `#CF6A22` | `#F0A24D` |
+| [纱帘红裙](../themes/scarlet-veil/) | 纱帘红裙 · ScarletVeil | `#B3203C` | `#D9485E` |
+| [镜前衣帽](../themes/mirror-closet/) | 镜前衣帽 · MirrorCloset | `#B98A5E` | `#D5AC80` |
+| [素床柔光](../themes/pale-linen/) | 素床柔光 · PaleLinen | `#8C7B6E` | `#B3A091` |
+| [粉绒居家](../themes/blush-room/) | 粉绒居家 · BlushRoom | `#B5738C` | `#D89CB0` |
+
+新增主题时：主色取壁纸里最稳的那个色块（人像/插画取服装或主体色），亮部取同色相提亮约 15%，`--text-primary` 取画面最深的暗部。这样卡片玻璃层透出壁纸时不会出现「两套颜色打架」。
