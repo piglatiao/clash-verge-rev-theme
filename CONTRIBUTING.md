@@ -4,6 +4,10 @@
 
 > 写主题前先读 [`docs/css-classnames.md`](docs/css-classnames.md)——官方源码核对的稳定类名清单与覆盖策略。
 
+> 不想手写？用 [`skills/clash-verge-theme-maker/`](skills/clash-verge-theme-maker/) 这个 AI skill，
+> 给一张图说一句话就能生成全套主题（三档 CSS + 预览 + 文档），见
+> [根 README · 用 AI 自己做主题](README.md#用-ai-自己做主题)。
+
 ```
 themes/
 └── <theme-name>/          # 主题名（英文小写连字符）
